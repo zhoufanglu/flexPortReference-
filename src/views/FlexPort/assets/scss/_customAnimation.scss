@@ -1,0 +1,22 @@
+//一些自定义动画样式
+
+//元素动画渐变效果， 背景/大小变化
+@mixin shade{
+    transition:all .2s ease-in-out 0s;   /* 常用的简写方式 */
+}
+
+//元素动画渐变效果，由0-100%
+@keyframes changeBg {
+    0% {
+        //background: none;
+        height: 110px;
+    }
+    100% {
+        background: #fff;
+        height: 90px;
+    }
+}
+@mixin visAnimation{
+    animation: changeBg .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
